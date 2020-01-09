@@ -1,3 +1,16 @@
-const mutations = {};
+// db mutations go here
+const Mutations = {
+  // use async / await because the thing returned to createItem is a Promise
+  async createItem(parent, args, ctx, info) {
+    // TODO: check if they are logged in
+    const item = await ctx.db.mutation.createItem({
+      data: {
+        ...args
+      }
+    }, info);
 
-module.exports = mutations;
+    return item;
+  }
+};
+
+module.exports = Mutations;
