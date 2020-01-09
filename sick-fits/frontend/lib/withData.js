@@ -1,3 +1,4 @@
+// Create HOC withData
 import withApollo from 'next-with-apollo';
 import ApolloClient from 'apollo-boost';
 import { endpoint } from '../config';
